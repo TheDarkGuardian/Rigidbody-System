@@ -354,6 +354,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/RocketController.cs"
+"Assets/Scripts/v2.cs"
 "Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserManager.cs"
 "Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserWindow.cs"
 "Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabModelWindow.cs"

@@ -48,6 +48,7 @@
      <Compile Include="Assets/Sketchfab For Unity/Scripts/Resizer.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabApi.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserWindow.cs" />
+     <Compile Include="Assets/Scripts/v2.cs" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFFlipTexture.shader" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFColorSpace.cginc" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFPackOccMetalRough.shader" />
