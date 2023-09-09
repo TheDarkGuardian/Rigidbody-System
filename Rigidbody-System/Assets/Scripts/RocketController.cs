@@ -2,39 +2,20 @@ using UnityEngine;
 
 public class RocketController : MonoBehaviour
 {
-    public Transform targetBObject;
-    public float speed = 5.0f;
-    public float accuracy = 0.1f;
+    public Vector3 hedefNokta; // Hedef noktanın koordinatları
+    public float roketHiz = 10.0f; // Roketin hızı
 
-    private Rigidbody rb;
-    private bool hasReachedTarget = false;
+    private Rigidbody roketRigidbody;
 
-    private void Start()
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        roketRigidbody = GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        if (!hasReachedTarget)
-        {
-            Vector3 currentPosition = rb.position;
-
-            Vector3 targetPositionB = targetBObject.position;
-            Vector3 moveDirection = targetPositionB + currentPosition;
-
-            if (moveDirection.magnitude < accuracy)
-            {
-                hasReachedTarget = true;
-                rb.velocity = Vector3.zero;
-                rb.position = targetPositionB;
-
-                // Gerekirse burada ekstra işlemler yapabilirsiniz
-            }
-            else
-            {
-                rb.AddForce(moveDirection.normalized * speed, ForceMode.Acceleration);
-            }
-        }
+        // Roketin hedefe doğru hareket etmesi
+        Vector3 roketYonu = (hedefNokta - roketRigidbody.position).normalized;
+        roketRigidbody.velocity = roketYonu * roketHiz;
     }
 }
